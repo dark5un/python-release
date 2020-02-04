@@ -8,7 +8,7 @@ releases:
 
 stemcells:
 - alias: default
-  os: ubuntu-trusty
+  os: ubuntu-xenial
   version: latest
 
 update:
@@ -18,11 +18,11 @@ update:
   update_watch_time: 5000-60000
 
 instance_groups:
-- name: zookeeper
+- name: python
   azs: [z1]
   instances: 1
   jobs:
-  - name: python-2.7-test
+  - name: python-3.8-test
     release: python
     properties: {}
   vm_type: default

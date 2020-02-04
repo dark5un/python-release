@@ -1,0 +1,27 @@
+set -e
+
+echo "Copying compile.env..."
+mkdir ${BOSH_INSTALL_TARGET}/bosh
+cp python-3.8/runtime.env ${BOSH_INSTALL_TARGET}/bosh/runtime.env
+cp python-3.8/compile.env ${BOSH_INSTALL_TARGET}/bosh/compile.env
+
+echo "Extracting libffi..."
+tar xzvf libffi-3.3.tar.gz
+
+echo "Building libffi..."
+pushd libffi-3.3
+  ./configure --prefix=$BOSH_INSTALL_TARGET
+  make
+  make install
+popd
+
+echo "Extracting python..."
+tar xzvf Python-3.8.1.tgz
+
+echo "Building python..."
+pushd Python-3.8.1
+  LDFLAGS="-Wl,-rpath -Wl,${BOSH_INSTALL_TARGET}/lib" CFLAGS='-fPIC' ./configure --prefix="${BOSH_INSTALL_TARGET}"
+  make
+  make install
+popd
+

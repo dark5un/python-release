@@ -1,0 +1,6 @@
+#!/bin/bash
+
+source /var/vcap/packages/python-3.8/bosh/runtime.env
+source /var/vcap/packages/python-3.8-test/bosh/runtime.env
+
+kafka-utils -v

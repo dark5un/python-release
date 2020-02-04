@@ -1,0 +1,10 @@
+---
+name: python-3.8
+
+dependencies: []
+
+files:
+- python-3.8/compile.env
+- python-3.8/runtime.env
+- Python-3.8.1.tgz
+- libffi-3.3.tar.gz

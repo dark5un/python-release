@@ -2,6 +2,13 @@ Python-2.7.6.tgz:
   size: 14725931
   object_id: 702bfd9d-2520-4657-6ae4-4884d2f1d2b7
   sha: 8328d9f1d55574a287df384f4931a3942f03da64
+Python-3.8.1.tgz:
+  size: 23978360
+  object_id: 562c129a-65ce-472a-5fab-87c6e676d13c
+  sha: sha256:c7cfa39a43b994621b245e029769e9126caa2a93571cee2e743b213cceac35fb
+libffi-3.3.tar.gz:
+  size: 1305466
+  sha: sha256:72fba7922703ddfa7a028d513ac15a85c8d54c8d67f55fa5a4802885dc652056
 pip-1.5.2.tar.gz:
   size: 1079904
   object_id: dda03a8f-08e7-4533-497d-1af4d4b6803e

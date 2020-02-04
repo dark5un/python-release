@@ -2,8 +2,8 @@ set -e
 
 echo "Copying compile.env..."
 mkdir ${BOSH_INSTALL_TARGET}/bosh
-cp runtime.env ${BOSH_INSTALL_TARGET}/bosh/runtime.env
-cp compile.env ${BOSH_INSTALL_TARGET}/bosh/compile.env
+cp python-2.7/runtime.env ${BOSH_INSTALL_TARGET}/bosh/runtime.env
+cp python-2.7/compile.env ${BOSH_INSTALL_TARGET}/bosh/compile.env
 
 echo "Extracting python..."
 tar xzvf Python-2.7.6.tgz
