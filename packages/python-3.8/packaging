@@ -17,9 +17,10 @@ popd
 
 echo "Extracting python..."
 tar xzvf Python-3.8.1.tgz
+python_dir=$(find . -type d -name '*3.8.1*' | head -n 1)
 
 echo "Building python..."
-pushd Python-3.8.1
+pushd "$python_dir"
   LDFLAGS="-Wl,-rpath -Wl,${BOSH_INSTALL_TARGET}/lib" CFLAGS='-fPIC' ./configure --prefix="${BOSH_INSTALL_TARGET}"
   make
   make install
